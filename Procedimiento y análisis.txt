@@ -1,0 +1,42 @@
+Programas que tenemos que tener instalados en nuestro equipo y que en mi caso use
+--MondoDB
+--NodeJS
+--Postman
+--Visual Studio Code (Este es opcional)
+--Git
+Parte 1 Instalación
+1)Vamos a crear una carpeta y la vamos a llamar AppMascotas.
+1.1)Dentro de la carpeta vamos a crear otra llamada backend y entramos a la misma.
+2) Ahora dentro de la carpeta backend damos click derecho y abrimos gitbash en la carpeta.
+2.1)Dentro de git bash vamos a ejecutar los siguientes comandos en el siguiente orden:
+Instalación de los ambientes y librerías necesarias:
+-	Se inicializa el proyecto Node
+<<npm init>>
+Una vez terminado el proceso creamos el archivo index.js
+-	Se instala los paquetes del servidor 
+<<npm install express>>
+-	Se instala la librería de JS para el mapeo de la bd mongo
+<<npm install mongoose>>
+-	Por último se instala el sistema de autenticación json web token
+<<npm install jsonwebtoken>>
+
+Parte 2 Programación
+Ya habiendo hecho el proceso anterior, ahora vamos a crear las siguientes 3 carpetas en las cuales vamos a hacer lo siguiente
+
+--> middleware Esta es simple, ya que en esta vamos a crear 1 archivo (auth.js) el cual va a validar el token de autentificación
+ a la hora de realizar la acción con postman y tomando en cuenta la info de mongo DB.
+
+-->model En esta carpeta vamos a crear archivos .js los van a establecer los esquemas y atributos que van  a tomar cada tabla a la hora de ejecutar alguna acción
+
+-->routes Tomando en cuenta todos los enlaces externos de las demás carpetas(middelware y model) en esta carpeta vamos a crear archivos .js
+los cuales van a validar o revisar un procedimiento en especifico (En este caso crear o autentificar) y acto seguido va a ejecutar dicha acción para la manipulación de datos en mongo db
+
+Seguido a esto en la carpeta backend y fuera de las demás que creamos anteriormente vamos a crear el archivo index.js el cual va a hacer de puente o conexión con mongodb y asu vez nos va a inicializar el puerto
+
+
+Parte 3 Ejecución
+
+Primero que todo en visual estudio vamos a cargar la app "apptareas" y acto seguido vamos a ejecutar la terminal powershell dentro de la misma
+después de hacer esto vamos a ejecutar el comando: node index.js para inicializar la app.
+
+Luego en postman revisaremos todas las funcionalidades del proyecto (en esta parte no me extiendo, ya que son muchos pasos a seguir de forma especifica)
